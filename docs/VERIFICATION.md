@@ -1,6 +1,6 @@
 # Verification record: 0.2.0
 
-Recorded October 7, 2026, on macOS with Node.js **22.19.0**. The package is MIT licensed and available as a local tarball. No registry publication or paid provider call occurred.
+Local checks recorded October 7, 2026, on macOS with Node.js **22.19.0**, before GitHub publication. The source is now public under MIT at [rudycelekli/open-teammates](https://github.com/rudycelekli/open-teammates), with a `v0.2.0` tag. No npm registry publication or paid provider call occurred.
 
 | Check | Actual result |
 | --- | --- |
@@ -16,4 +16,8 @@ Source tests include actual competing processes, guarded dead-writer recovery, l
 
 A separate local fictional work cycle used the current Codex host to author an executive recommendation and save it through the actual MCP CLI subprocess. The draft version advanced, the eight-artifact pack remained available, and a proposed decision was retained. No task was marked complete, no owner acceptance or actual outcome was invented, and no external action executed. This demonstrates local host-authored work, not measured event-delivery competence.
 
-GitHub Actions is configured for Linux and Node 22/24, including the clean package smoke. That workflow has not been run in a standalone public repository here. Particular Hermes/OpenClaw installations, actual provider compatibility, human-reviewed model comparisons and real professional outcomes remain unverified. Evaluation outputs require explicit live opt-in and independent human review before supporting a judgment claim.
+The [initial public GitHub Actions run](https://github.com/rudycelekli/open-teammates/actions/runs/37580632209) passed on Linux with both Node 22 and Node 24 at commit `c1bc95336ba4459fb4f7f10b1b4575ecf0ea436d`. Both jobs passed dependency installation, syntax/role checks, tests, packaging and the clean installed-tarball MCP smoke. The [tag-triggered run](https://github.com/rudycelekli/open-teammates/actions/runs/37580665517) also passed.
+
+The README's GitHub installation command was separately exercised from a temporary directory with an empty npm cache: `github:rudycelekli/open-teammates#v0.2.0` successfully hired Mira, saved eight artifacts and twelve unresolved tasks, and made zero provider requests. Temporary data was removed. This verifies public GitHub source installation; it does not claim npm registry availability.
+
+Particular Hermes/OpenClaw installations, actual provider compatibility, human-reviewed model comparisons and real professional outcomes remain unverified. Evaluation outputs require explicit live opt-in and independent human review before supporting a judgment claim.
