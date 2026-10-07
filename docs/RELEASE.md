@@ -1,0 +1,24 @@
+# Publish the 0.2.0 foundation
+
+The source is published at [rudycelekli/open-teammates](https://github.com/rudycelekli/open-teammates) under MIT. GitHub source installation is separate from npm registry publication. The npm package name is not reserved; check availability and publication credentials before a registry release. The steps below describe reproducible release and registry checks.
+
+1. Copy this directory into a standalone repository, preserving MIT LICENSE, contributor instructions and the dependency lockfile. Its `.github/workflows/ci.yml` is written for the standalone root and installs dependencies before checking Node 22 and 24.
+2. Set package `repository`, `bugs`, `homepage` and approved author information to real locations. Verify the chosen npm name and publishing account. Add package provenance through the publisher's trusted publishing setup.
+3. Run `npm ci --ignore-scripts`, `npm run check`, `npm test`, and `npm pack`. Source installation uses the committed lockfile; direct dependencies are pinned to `@modelcontextprotocol/sdk` 1.32.1 and Zod 4.6.5. Record the package or commit, Node version, commands and actual results. `npm pack` runs the package's prepack checks.
+4. Inspect `open-teammates-0.2.0.tgz`. It must include the CLI, source modules, role/DNA/skill files, docs and eight-case `evals` fixture. Workspace state, conversations, credentials, personal data and local evaluation outputs must not be included. Do not infer a public registry install from a local tarball smoke.
+5. From a fresh temporary directory, smoke the packed artifact using its absolute path:
+
+   ```sh
+   npx --yes --package /absolute/path/to/open-teammates-0.2.0.tgz open-teammates hire chief-of-events --demo --project ./host-project --dir ./events --json
+   npx --yes --package /absolute/path/to/open-teammates-0.2.0.tgz open-teammates briefing --dir ./events --json
+   npx --yes --package /absolute/path/to/open-teammates-0.2.0.tgz open-teammates eval plan --out ./evaluation-plan
+   npx --yes --package /absolute/path/to/open-teammates-0.2.0.tgz open-teammates export --runtime hermes --out ./mira-hermes
+   ```
+
+   Inspect the fictional mission's eight artifacts and twelve unresolved tasks, the role bundle, preserved project MCP configuration and role instructions, and the baseline/Mira requests with separate grader notes. Keep the Node executable and package path in `.mcp.json` available for future host launches; use a durable installation or reconnect after moving the package or clearing an npm cache.
+6. Run `npm run smoke:package -- ./open-teammates-0.2.0.tgz`. This repeatable check installs the tarball into an empty npm cache, verifies hire/briefing/connect/offline evaluation, and launches the installed MCP server with the official SDK client to initialize, discover tools, read role resources and inspect status. It cleans temporary data and makes no provider requests. The source suite separately tests prompt loading, a harmless local work cycle and denied owner approval attempts. CI repeats the packed smoke after the source checks; its Linux/Node matrix requires an actual CI run before claiming those platforms tested. Test startup, instruction loading and the work cycle in the selected real host separately. SDK interoperability does not establish Hermes/OpenClaw deployment or role adoption.
+7. Test real model drafting and consultation with a fictional brief and an explicitly chosen API budget. Run any paid evaluation one case at a time using `eval run --out DIR --case ID --live`, which attempts two requests. Retain outputs, provider/model/configuration, usage, failures and independent human reviews. Tests use mocked providers and supply no professional judgment score. Report untested hosts/providers and failed cases honestly.
+8. Publish from the chosen account, then verify the chosen package identity and `npx open-teammates@0.2.0 hire chief-of-events --demo` in a clean environment, using the actual approved package name if it differs. Only after this registry smoke succeeds should documentation claim a working public one-line install. Public publication is a separate authorized action, not part of a local packaging check.
+9. Open the series with an inspectable fictional example, readable personality DNA, observed comparison evidence where available, limitations and an issue roadmap. Publish complete evaluation scope and failures; a successful installation or structural test does not establish a world-class employee.
+
+`hire` onboarding, host-format selection and project-local `connect` are implemented in 0.2.0. Independently published role packages, additional employees and automatic host installers remain future work. Credentials, subscriptions, access permissions, verified external actions and real event delivery cannot be supplied by an npm one-liner.

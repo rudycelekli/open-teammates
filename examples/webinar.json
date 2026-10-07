@@ -1,0 +1,19 @@
+{
+  "name": "Build One Useful Workflow",
+  "organization": "Your organization",
+  "objective": "Help participants reproduce a useful product workflow and identify its limits in a one-hour broadcast.",
+  "audience": "Developers and technical customer teams joining remotely",
+  "format": "webinar",
+  "city": "New York",
+  "date": "2027-02-11",
+  "timezone": "America/New_York",
+  "budget": 12000,
+  "currency": "USD",
+  "capacity": 250,
+  "constraints": [
+    "Fictional planning example; studio, crew, and participants are unverified.",
+    "Provide live captions, accessible replay, and a text version of the workflow.",
+    "The public broadcast runs 10:00–11:00 local; office hours are optional.",
+    "Use opt-in follow-through and a prepared offline demo recording."
+  ]
+}

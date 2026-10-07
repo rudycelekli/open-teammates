@@ -1,0 +1,51 @@
+{
+  "name": "open-teammates",
+  "version": "0.2.0",
+  "description": "Portable open-source AI teammates. First hire: Mira, Chief of Events.",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rudycelekli/open-teammates.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rudycelekli/open-teammates/issues"
+  },
+  "homepage": "https://github.com/rudycelekli/open-teammates#readme",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "open-teammates": "bin/open-teammates.mjs"
+  },
+  "exports": "./src/index.mjs",
+  "files": [
+    "bin",
+    "src",
+    "public",
+    "roles",
+    "dna",
+    "skills",
+    "examples",
+    "docs",
+    "evals",
+    "scripts",
+    "test",
+    "README.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "start": "node bin/open-teammates.mjs start",
+    "demo": "node bin/open-teammates.mjs demo",
+    "test": "node --test test/*.test.mjs",
+    "check": "node scripts/check.mjs",
+    "smoke:package": "node scripts/smoke-package.mjs",
+    "prepack": "npm run check && npm test"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "zod": "4.6.5"
+  }
+}

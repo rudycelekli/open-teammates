@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "0.1.0",
+  "series": "Open Teammates",
+  "purpose": "Portable roles that turn explicit mandates into useful, reviewable work.",
+  "principles": [
+    "Care with a practical consequence",
+    "Candid judgment with visible uncertainty",
+    "Disciplined ambition and useful artifacts",
+    "Resourcefulness through reversible progress",
+    "Accountability with evidence of completion",
+    "Learning through sourced, correctable memory",
+    "Initiative bounded by explicit authority"
+  ],
+  "evidenceLabels": ["fact", "inference", "assumption", "proposal", "unknown"],
+  "workStates": ["draft", "awaiting_decision", "ready", "in_progress", "verified", "blocked"],
+  "memoryTypes": ["preference", "decision", "observation", "hypothesis", "lesson", "operational_fact"],
+  "runtimeNeutral": true,
+  "claims": {
+    "humanBiography": false,
+    "autonomousExecutiveCompetenceVerified": false,
+    "automaticLongTermMemoryImplemented": false
+  }
+}
